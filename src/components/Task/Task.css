@@ -3,10 +3,6 @@
     width: 100%;
 }
 
-.task:hover {
-    cursor: pointer;
-}
-
 .task-content {
     position: relative;
     background-color: #fff;
@@ -17,6 +13,10 @@
 .task-title {
     margin-bottom: 0.5rem;
     width: 95%;
+}
+
+.task-title:hover, .task p:hover {
+    cursor: pointer;
 }
 
 .x-mark {
