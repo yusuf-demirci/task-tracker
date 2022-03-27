@@ -1,5 +1,5 @@
 button {
-    transition: all ease-in-out 100ms;
+    transition: all ease-in-out 300ms;
 }
 
 button:active {
