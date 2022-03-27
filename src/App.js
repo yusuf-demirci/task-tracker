@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import AddTask from "./components/AddTask/AddTask";
 import Header from "./components/Header/Header";
@@ -7,20 +7,22 @@ import { v4 as uuid } from "uuid";
 
 function App() {
     const [showTaskBar, setShowTaskBar] = useState(true);
-    const [taskList, setTaskList] = useState([
-        {
-            id: 1,
-            task: "Study Pre-class Notes",
-            date: new Date().toLocaleDateString("en-US"),
-            done: false,
-        },
-        {
-            id: 2,
-            task: "Search for job opportunities",
-            date: "Everyday!",
-            done: false,
-        },
-    ]);
+    const [taskList, setTaskList] = useState(
+        JSON.parse(localStorage.getItem("taskList")) || [
+            {
+                id: 1,
+                task: "Study Pre-class Notes",
+                date: new Date().toLocaleDateString("en-US"),
+                done: false,
+            },
+            {
+                id: 2,
+                task: "Search for job opportunities",
+                date: "Everyday!",
+                done: false,
+            },
+        ]
+    );
 
     const [task, setTask] = useState({
         id: "",
@@ -30,6 +32,10 @@ function App() {
     });
 
     const [warning, setWarning] = useState("");
+
+    useEffect(() => {
+        localStorage.setItem("taskList", JSON.stringify(taskList));
+    }, [taskList]);
 
     const handleInputChange = (e) => {
         setTask({
