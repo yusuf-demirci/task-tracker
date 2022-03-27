@@ -1,0 +1,36 @@
+.task {
+    background-color: #95007f;
+    width: 100%;
+}
+
+.task:hover {
+    cursor: pointer;
+}
+
+.task-content {
+    position: relative;
+    background-color: #fff;
+    padding: 1rem;
+    transition: all ease-in-out 300ms;
+}
+
+.task-title {
+    margin-bottom: 0.5rem;
+    width: 95%;
+}
+
+.x-mark {
+    position: absolute;
+    color: #fe0000;
+    top: 1.2rem;
+    right: 1rem;
+}
+
+.x-mark:hover {
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+    margin-left: 0.6rem;
+}

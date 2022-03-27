@@ -1,0 +1,15 @@
+button {
+    transition: all ease-in-out 100ms;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.task-bar-button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #95007f;
+    color: #fff;
+}

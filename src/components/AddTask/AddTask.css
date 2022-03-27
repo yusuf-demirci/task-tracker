@@ -1,0 +1,17 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.task-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.4rem;
+}
+
+.warning {
+    color: #fe0000;
+    background-color: #f9d1d1;
+}
