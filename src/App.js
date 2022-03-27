@@ -31,7 +31,7 @@ function App() {
 
     const [warning, setWarning] = useState("");
 
-    const handleChange = (e) => {
+    const handleInputChange = (e) => {
         setTask({
             ...task,
             [e.target.name]: e.target.value,
@@ -43,7 +43,7 @@ function App() {
     };
 
     const handleSaveTask = (data) => {
-        if (data.task == "") {
+        if (data.task === "") {
             setWarning("Please enter a task!");
             setTimeout(() => {
                 setWarning("");
@@ -89,7 +89,7 @@ function App() {
                 <AddTask
                     task={task}
                     funcSave={handleSaveTask}
-                    funcChange={handleChange}
+                    funcChange={handleInputChange}
                     warning={warning}
                 />
             )}
